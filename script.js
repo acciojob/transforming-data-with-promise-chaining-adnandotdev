@@ -3,7 +3,7 @@ let button = document.getElementById("btn")
 let output = document.getElementById("output")
 button.addEventListener("click", () => {
 	let inputNumber = document.getElementById("ip").value
-	 return new Promise((resolve) => {
+	new Promise((resolve) => {
 		setTimeout(() => {
 			output.textContent = "Result: " + inputNumber
 			resolve(inputNumber)
@@ -13,8 +13,8 @@ button.addEventListener("click", () => {
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				let outputNum = num*2
-				output.textContent = "Result" + outputNum
-				reslove(outputNum)
+				output.textContent = "Result: " + outputNum
+				resolve(outputNum)
 			}, 2000)
 		})
 	})
@@ -22,8 +22,8 @@ button.addEventListener("click", () => {
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				let outputNum = num-3
-				output.textContent = "Result" + outputNum
-				reslove(outputNum)
+				output.textContent = "Result: " + outputNum
+				resolve(outputNum)
 			}, 1000)
 		})
 	})
@@ -31,8 +31,8 @@ button.addEventListener("click", () => {
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				let outputNum = num/2
-				output.textContent = "Result" + outputNum
-				reslove(outputNum)
+				output.textContent = "Result: " + outputNum
+				resolve(outputNum)
 			}, 1000)
 		})
 	})
@@ -40,8 +40,8 @@ button.addEventListener("click", () => {
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				let outputNum = num+10
-				output.textContent = "Final Result" + outputNum
-				reslove(outputNum)
+				output.textContent = "Final Result: " + outputNum
+				resolve(outputNum)
 			}, 1000)
 		})
 	})
